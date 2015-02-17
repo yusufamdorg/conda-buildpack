@@ -15,6 +15,7 @@
 BUILD_DIR=$1
 
 # Exit early if app is clearly not Python.
+echo "Checking $BUILD_DIR for environment.yml"
 if [ ! -f $BUILD_DIR/environment.yml ]; then
   if [ ! -f $BUILD_DIR/requirements.txt ] && [ ! -f $BUILD_DIR/conda-requirements.txt ] && [ ! -f $BUILD_DIR/setup.py ]; then
     exit 1
