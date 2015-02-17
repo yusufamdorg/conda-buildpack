@@ -6,6 +6,7 @@ if [ ! -d /app/.heroku/miniconda ]; then
     bash Miniconda-${CONDA_VERSION}-Linux-x86_64.sh -p /app/.heroku/miniconda/ -b | indent
     rm -fr Miniconda-${CONDA_VERSION}-Linux-x86_64.sh
 
+    conda update conda --yes | indent
 fi
 
 
