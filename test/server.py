@@ -2,10 +2,6 @@ from __future__ import print_function
 import os
 import sys
 
-print(os.environ)
-for a in os.environ["PYTHONPATH"].split(":"):
-    print("%s exists? %s" % (a, os.path.exists(a)))
-
 from werkzeug.wrappers import Request, Response
 
 name = "World" if len(sys.argv) == 1 else sys.argv[1]
@@ -17,4 +13,4 @@ def application(request):
 
 if __name__ == '__main__':
     from werkzeug.serving import run_simple
-    run_simple('localhost', 4000, application)
+    run_simple('', os.environ["PORT"], application)
