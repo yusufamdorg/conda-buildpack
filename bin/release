@@ -4,6 +4,6 @@
 cat <<EOF
 ---
 config_vars:
-  PATH: /app/.heroku/anaconda/bin:/usr/local/bin:/usr/bin:/bin
+  PATH: /app/.heroku/miniconda/envs/heroku-env/bin:/app/.heroku/anaconda/bin:/usr/local/bin:/usr/bin:/bin
   CONDA_DEFAULT_ENV: heroku-env
 EOF
