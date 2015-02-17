@@ -51,5 +51,3 @@ Heroku limits the final application footprint (slug) size to 300MB. Start small.
 [Conda]: http://conda.io
 [environment spec]: https://github.com/conda/conda-env#environmentyml
 [Heroku Buildpack]: https://devcenter.heroku.com/articles/buildpacks
-
-ॐ
