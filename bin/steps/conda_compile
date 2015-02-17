@@ -15,5 +15,10 @@ if [ -f conda-requirements.txt ]; then
     conda install --file conda-requirements.txt --yes | indent
 fi
 
+if [ -f environment.yml ]; then
+    puts-step "Creating conda environment"
+    conda env create --name=heroku-env --file environment.yml | indent
+fi
+
 # Clean up the installation environment .
 conda clean -pt --yes > /dev/null
