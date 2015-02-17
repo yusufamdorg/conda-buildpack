@@ -12,7 +12,7 @@ of your repository.  For example, if you wanted to install Flask, you would add
 this:
 
 ```yaml
-name: myproject  # overridden at install, so this is for your user
+name: myproject  # overridden at install, so this is for your use with conda env
 dependencies:
   - flask
 ```
