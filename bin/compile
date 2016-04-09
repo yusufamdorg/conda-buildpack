@@ -40,7 +40,7 @@ mkdir -p $TMP_APP_DIR
 deep-mv $APP_DIR $TMP_APP_DIR
 
 # Copy Application code in.
-deep-mv $BUILD_DIR $APP_DIR
+deep-mv-only-subdirectories $BUILD_DIR $APP_DIR
 
 # Set new context.
 ORIG_BUILD_DIR=$BUILD_DIR
@@ -103,5 +103,5 @@ source $BIN_DIR/steps/hooks/post_compile
 
 # ### Fin.
 
-deep-mv $BUILD_DIR $ORIG_BUILD_DIR
+deep-mv-only-subdirectories $BUILD_DIR $ORIG_BUILD_DIR
 deep-mv $TMP_APP_DIR $APP_DIR
