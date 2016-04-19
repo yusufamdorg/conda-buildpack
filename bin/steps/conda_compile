@@ -17,6 +17,11 @@ if [ -f conda-requirements.txt ]; then
     conda install --file conda-requirements.txt --yes
 fi
 
+if [ -f requirements.txt ]; then
+    puts-step "Installing dependencies using PIP"
+	pip install -r requirements.txt --yes
+fi
+
 if [ -f environment.yml ]; then
     puts-step "Creating conda environment"
     # TODO: Use update if its already there
